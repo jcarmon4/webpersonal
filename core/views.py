@@ -12,10 +12,7 @@ html_base = """
 
 # Create your views here.
 def home(request):
-    html_response = """
-        <h3>Home</h3>
-    """
-    return HttpResponse(html_base + html_response)
+    return render(request, "core/home.html" )
 
 def about(request):
     html_response = """
