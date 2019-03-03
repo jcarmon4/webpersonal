@@ -27,6 +27,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+# Truco: Solo en ambiente de desarrollo, traduce 
+# la petición a /media al directorio donde se encuentra los archivos
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
